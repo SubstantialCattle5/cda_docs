@@ -1,0 +1,655 @@
+<html><head><meta charset="UTF-8"><script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-json.min.js"></script><style>
+        .api-block {
+            padding: 15px 15px 10px 15px;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+        
+
+        .api-code-green {
+            color: #4dbb5f;
+        }
+        
+
+        .api-code-red {
+            color: #fa5c4a;
+        }
+        
+
+        .api-content-type {
+            font-size: 12px;
+        }
+        
+
+        .api-endpoint {
+            display:inline-flex;
+            align-items:center;
+            padding:8px 16px;
+            margin-bottom:12px;
+            background-color: rgba(25, 25, 28, .05);
+            border-radius:8px;
+        }
+        
+
+        .api-grey-block {
+            background-color: rgba(25, 25, 28, .05);
+        }
+        
+
+        .api-grey-text {
+            color: #67686b;
+        }
+        
+
+        .api-header {
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+        }
+        
+
+        .api-path {
+            margin-left: 15px;
+        }
+        
+
+        .api-required {
+            color: #307fff;
+            margin-left: 8px;
+        }
+        
+
+        .api-section {
+            width: 75%;
+            margin-bottom: 12px;
+        }
+        
+
+        .api-status-code {
+            margin-right: 8px;
+        }
+        
+
+        .api-white-block {
+            background-color: white;
+        }
+        
+
+        .article {
+            position: relative;
+            padding-bottom: 24px;
+        }
+        
+
+        .bordered-element {
+            border: 1px solid #c4c4c4;
+            overflow: hidden;
+        }
+        
+
+        .bordered-element-rounded {
+            border: 1px solid #c4c4c4;
+            border-radius: 7px;
+            overflow: hidden;
+        }
+        
+
+        .code-block {
+            overflow: hidden;
+            position: relative;
+            padding: 0;
+            border-radius: 8px;
+            font-variant-ligatures: none;
+            background-color: rgba(25, 25, 28, .05);
+            word-break: break-all;
+        }
+        
+
+        .control {
+            color: #19191c;
+            font-size: 16px;
+            font-weight: 670;
+        }
+        
+
+        .detached {
+            margin-block-start: 0;
+            margin-block-end: 0;
+            margin-bottom: 8px;
+        }
+        
+
+        .flex {
+            display: flex;
+        }
+        
+
+        .header-row {
+            background: #e6e6e6;
+        }
+        
+
+        .image {
+            max-width: 100%;
+            max-height: 90vh;
+            width: auto;
+        }
+        
+
+        .image-container {
+            max-width: 100vw;
+        }
+        
+
+        .inline-code {
+            border-radius: 4px;
+            display: inline;
+            padding: 2px 1px;
+            font-family: JetBrains Sans,monospace;
+            background: #e6e6e6;
+        }
+        
+
+        .inline-icon {
+            vertical-align: middle;
+        }
+        
+
+        .list {
+            list-style-type: disc;
+            padding-left: 0;
+            margin-left: 15px;
+        }
+        
+
+        .list-decimal {
+            list-style-type: decimal;
+        }
+        
+
+        .list-item {
+            margin-top: 6px;
+            margin-bottom: 6px;
+            margin-left: 4px;
+        }
+        
+
+        .main-title {
+            padding-bottom: 24px;
+            margin-top: 0;
+            font-size: 40px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+
+        .note {
+            background: rgba(77, 187, 95, .2);
+        }
+        
+
+        .prism {
+            page-break-inside: avoid;
+        }
+        
+        /* PrismJS 1.29.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+abap+abnf+actionscript+ada+agda+al+antlr4+apacheconf+apex+apl+applescript+aql+arduino+arff+armasm+arturo+asciidoc+aspnet+asm6502+asmatmel+autohotkey+autoit+avisynth+avro-idl+awk+bash+basic+batch+bbcode+bbj+bicep+birb+bison+bnf+bqn+brainfuck+brightscript+bro+bsl+c+csharp+cpp+cfscript+chaiscript+cil+cilkc+cilkcpp+clojure+cmake+cobol+coffeescript+concurnas+csp+cooklang+coq+crystal+css-extras+csv+cue+cypher+d+dart+dataweave+dax+dhall+diff+django+dns-zone-file+docker+dot+ebnf+editorconfig+eiffel+ejs+elixir+elm+etlua+erb+erlang+excel-formula+fsharp+factor+false+firestore-security-rules+flow+fortran+ftl+gml+gap+gcode+gdscript+gedcom+gettext+gherkin+git+glsl+gn+linker-script+go+go-module+gradle+graphql+groovy+haml+handlebars+haskell+haxe+hcl+hlsl+hoon+http+hpkp+hsts+ichigojam+icon+icu-message-format+idris+ignore+inform7+ini+io+j+java+javadoc+javadoclike+javastacktrace+jexl+jolie+jq+jsdoc+js-extras+json+json5+jsonp+jsstacktrace+js-templates+julia+keepalived+keyman+kotlin+kumir+kusto+latex+latte+less+lilypond+liquid+lisp+livescript+llvm+log+lolcode+lua+magma+makefile+markdown+markup-templating+mata+matlab+maxscript+mel+mermaid+metafont+mizar+mongodb+monkey+moonscript+n1ql+n4js+nand2tetris-hdl+naniscript+nasm+neon+nevod+nginx+nim+nix+nsis+objectivec+ocaml+odin+opencl+openqasm+oz+parigp+parser+pascal+pascaligo+psl+pcaxis+peoplecode+perl+php+phpdoc+php-extras+plant-uml+plsql+powerquery+powershell+processing+prolog+promql+properties+protobuf+pug+puppet+pure+purebasic+purescript+python+qsharp+q+qml+qore+r+racket+cshtml+jsx+tsx+reason+regex+rego+renpy+rescript+rest+rip+roboconf+robotframework+ruby+rust+sas+sass+scss+scala+scheme+shell-session+smali+smalltalk+smarty+sml+solidity+solution-file+soy+sparql+splunk-spl+sqf+sql+squirrel+stan+stata+iecst+stylus+supercollider+swift+systemd+t4-templating+t4-cs+t4-vb+tap+tcl+tt2+textile+toml+tremor+turtle+twig+typescript+typoscript+unrealscript+uorazor+uri+v+vala+vbnet+velocity+verilog+vhdl+vim+visual-basic+warpscript+wasm+web-idl+wgsl+wiki+wolfram+wren+xeora+xml-doc+xojo+xquery+yaml+yang+zig&plugins=highlight-keywords */
+code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shadow:0 1px #fff;font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;font-size:1em;text-align:left;white-space:pre-wrap;word-spacing:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-] ::-moz-selection,code[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection{text-shadow:none;background:#b3d4fc}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:16px;margin:0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#9a6e3a;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}
+
+        
+
+        .prompt {
+            flex-direction: row;
+            letter-spacing: .0015em;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        
+
+        .prompt-content {
+            padding: 15px;
+            overflow: hidden;
+            flex: 1 1 auto;
+        }
+        
+
+        .prompt-content-p p {
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+
+        .prompt-icon {
+            flex: 0 0 auto;
+            margin-left: 15px;
+            margin-top: 15px;
+            fill: currentcolor;
+            width: 24px;
+            height: 24px;
+        }
+        
+
+        :root {
+            width: 95%;
+            max-width: 95vw;
+            padding: 0 0 0 30px;
+        }
+        
+        body {
+            font-family: JetBrains Sans,serif;
+        }
+        
+        a {
+            overflow-wrap: anywhere;
+            width: 100vw;
+        }
+        
+        
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Light.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Light.woff) format("woff");
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Regular.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Regular.woff) format("woff");
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-SemiBold.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-SemiBold.woff) format("woff");
+            font-weight: 600;
+            font-style: normal;
+        }
+        
+        
+        code {
+            display: inline;
+            word-break: break-word;
+            font-size: 15px;
+            line-height: inherit;
+            font-variant-ligatures: none;
+            font-family: JetBrains Sans,monospace;
+            white-space: pre-line;
+            overflow-wrap: break-word;
+        }
+        
+        figcaption {
+            margin-top: 5px;
+        }
+        
+        h2 {
+            padding-top: 16px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        h3 {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        h4 {
+            padding-top: 4px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        p {
+            padding: 0;
+            border: 0;
+            line-height: 25px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+            padding-bottom: 8px;
+        }
+        
+        div {
+            display: block;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            page-break-inside: avoid;
+        }
+        
+        th, td {
+            border: 1px solid #c4c4c4;
+            padding: 10px;
+            text-align: left;
+            word-break: break-all;
+        }
+        
+        .entry {
+            display: grid;
+            grid-template-columns: auto max-content;
+            grid-template-areas: "chapter page";
+            align-items: end;
+            gap: 0 .25rem;
+            line-height: 25px;
+        }
+        
+        .toc-link-container{
+            grid-area: chapter;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .toc-link{
+            text-decoration: none;
+            color: black;
+        }
+        
+        .toc-link-container::after {
+            position: absolute;
+            padding-left: .25ch;
+            content: " . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+            ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+            ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";
+            text-align: right;
+        }
+        
+        .page {
+            grid-area: page;
+            width: 30px;
+            text-align: right;
+        }
+        
+
+        .tab-content {
+            padding: 16px;
+        }
+        
+        .tab-content > *  {
+            border: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+
+        .tab-title  {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        
+
+        .table-wrapper {
+            overflow: hidden;
+            box-sizing: border-box;
+            font: inherit;
+        }
+        
+
+        .topic {
+            page-break-before: always;
+        }
+        </style></head><body><div><section class="topic"><div><article class="article"><h1 class="main-title">Table of contents</h1><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#920783374">Ceph Drill Automation</a></div><div class="page">2</div></div><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#-1521149880">Cli Command Reference</a></div><div class="page">5</div></div><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#633564984">API Reference</a></div><div class="page">8</div></div><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#80127">Pet</a></div><div class="page">9</div></div><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#1677777085">Find pet inventories by status</a></div><div class="page">27</div></div><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#914431222">Place order for pet</a></div><div class="page">28</div></div><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#-269727814">Find purchase order by ID</a></div><div class="page">34</div></div><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#-687404280">Delete purchase order by ID</a></div><div class="page">36</div></div><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#1128157660">Create user</a></div><div class="page">37</div></div><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#-319361887">Create list of users with given input array</a></div><div class="page">40</div></div><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#-525688876">Log user into the system</a></div><div class="page">44</div></div><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#1631193570">Log current user out</a></div><div class="page">46</div></div><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#471905602">Find user</a></div><div class="page">47</div></div><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#1048285743">Update user</a></div><div class="page">49</div></div><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#499909261">Delete user</a></div><div class="page">52</div></div><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#-1891370333">Changes</a></div><div class="page">53</div></div></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="920783374">Ceph Drill Automation</h1><section><h2 id="920783374#introduction" data-toc="introduction#api-docs.md-introduction">Introduction</h2><p id="920783374#imkxw8_807">Automate the process of verifying data integrity during disaster recovery drills in a Ceph storage cluster by using checksums and hashing. This ensures the integrity of RBD images transferred from the primary data center (DC) to the disaster recovery (DR) site without the need to launch a version of the image.</p></section><section><h2 id="920783374#installation" data-toc="installation#api-docs.md-installation">Installation</h2><p id="920783374#imkxw8_808"><span class="control" id="920783374#imkxw8_809">Note</span>: In this guide we describe using installation using .tar file. You can also clone it from github (<a href="https://github.com/substantialcattle5/">https://github.com/substantialcattle5/</a>) Install the file using</p><div class="detached code-block" id="920783374#imkxw8_811"><pre><code class="language-bash">wget localhost.com</code></pre></div><p id="920783374#imkxw8_812">Then unzip the file</p><div class="detached code-block" id="920783374#imkxw8_813"><pre><code class="language-bash">tar -xvzf &lt;reqd_release&gt;.tar.gz</code></pre></div><p id="920783374#imkxw8_814">Then provide enough permissions tfo execute</p><div class="detached code-block" id="920783374#imkxw8_815"><pre><code class="language-bash">chmod a+x cda.sh</code></pre></div></section><section><h2 id="920783374#basic-workflow" data-toc="basic-workflow#api-docs.md-basic-workflow">Basic workflow</h2><p id="920783374#imkxw8_816">Once installed, you can invoke CLI commands directly from your OS command line through the <span class="inline-code" id="920783374#imkxw8_817">cephautomationdrill</span> executable. See the available commands by entering the following:</p><div class="detached code-block" id="920783374#imkxw8_818"><pre><code class="language-bash">cda --help</code></pre></div><p id="920783374#imkxw8_819">Get help on an individual command using the following construct. Substitute any command, like verify, check, etc., where you see generate in the example below to get detailed help on that command:</p><div class="detached code-block" id="920783374#imkxw8_820"><pre><code class="language-bash">cda verify --help</code></pre></div><p id="920783374#imkxw8_821">To run a basic drill check, go to the ceph center and run the following command , replacing the names with your own:</p><div class="detached code-block" id="920783374#imkxw8_822"><pre><code class="language-bash">cda check &lt;pool-name&gt; &lt;image-name&gt;</code></pre></div><p id="920783374#imkxw8_823">The results would get stored in <span class="inline-code" id="920783374#imkxw8_824">checksum</span> directory,the structure is as follows :</p><div class="detached code-block" id="920783374#imkxw8_825"><pre><code class="language-bash">checksums/
+├── export
+│        └── &lt;poolname&gt;_&lt;imagename&gt;.log
+│        └── &lt;poolname&gt;_&lt;imagename&gt;.log
+│        └── &lt;poolname&gt;_&lt;imagename&gt;.log
+├── export-diff
+│        └── &lt;poolname&gt;_&lt;imagename&gt;.log
+└── verify
+        └── &lt;poolname&gt;_&lt;imagename&gt;.log</code></pre></div></section><section><h2 id="920783374#cli-command-syntax" data-toc="cli-command-syntax#api-docs.md-cli-command-syntax">CLI command syntax</h2><p id="920783374#imkxw8_826">All <span class="inline-code" id="920783374#imkxw8_827">cda</span> commands follow the same format:</p><div class="detached code-block" id="920783374#imkxw8_828"><pre><code class="language-bash">cda commandOrAlias requiredArg [optionalArg] [options]</code></pre></div><p id="920783374#imkxw8_829">For example:</p><div class="detached code-block" id="920783374#imkxw8_830"><pre><code class="language-bash">cda check pool1 vm_state1</code></pre></div><section><h3 id="920783374#command-overview" data-toc="command-overview#api-docs.md-command-overview">Command Overview</h3><p id="920783374#imkxw8_831">Run <span class="inline-code" id="920783374#imkxw8_832">cephautomationdrill &lt;command&gt; --help</span> for any of the following commands to see command-specific options See usage for detailed descriptions for each command.</p><div class="table-wrapper detached"><table id="920783374#imkxw8_833"><tr class="header-row" id="920783374#imkxw8_834"><th id="920783374#imkxw8_835"><p>Command</p></th><th id="920783374#imkxw8_836"><p>Alias</p></th><th id="920783374#imkxw8_837"><p>Description</p></th></tr><tr class="" id="920783374#imkxw8_838"><td id="920783374#imkxw8_839"><p>check</p></td><td id="920783374#imkxw8_840"><p>c</p></td><td id="920783374#imkxw8_841"><p>This command generates a hash of the given snapshot and saves it in a log file.</p></td></tr><tr class="" id="920783374#imkxw8_842"><td id="920783374#imkxw8_843"><p>completion</p></td><td id="920783374#imkxw8_844"></td><td id="920783374#imkxw8_845"><p>Generates and/or modifies files based on a schematic.</p></td></tr><tr class="" id="920783374#imkxw8_846"><td id="920783374#imkxw8_847"><p>verify</p></td><td id="920783374#imkxw8_848"></td><td id="920783374#imkxw8_849"><p>Generate the autocompletion script for the specified shell</p></td></tr><tr class="" id="920783374#imkxw8_850"><td id="920783374#imkxw8_851"><p>help</p></td><td id="920783374#imkxw8_852"><p>h</p></td><td id="920783374#imkxw8_853"><p>Help about any command.</p></td></tr></table></div></section></section></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="-1521149880">Cli Command Reference</h1><section><h2 id="-1521149880#check" data-toc="check#API-quickstart.md-check">check</h2><p id="-1521149880#qdytvf_377">Automates the Image Drill process.</p><div class="detached code-block" id="-1521149880#qdytvf_378"><pre><code class="language-bash">cda export &lt;pool_name&gt; &lt;vm_snapshot_name&gt;
+cda export-diff &lt;pool_name&gt; &lt;vm_snapshot_name&gt;</code></pre></div><section><h3 id="-1521149880#description" data-toc="description#API-quickstart.md-description">Description</h3><p id="-1521149880#qdytvf_379">Saves a timestamp and checksum to the inbuilt log file of an <span class="inline-code" id="-1521149880#qdytvf_380">ceph_image</span> which can be later used for validation checks.</p><ol class="list list-decimal" id="-1521149880#qdytvf_381" type="1" start="1"><li class="list-item" id="-1521149880#qdytvf_382"><p><span class="inline-code" id="-1521149880#qdytvf_383">export/export-diff</span> signifies which <span class="inline-code" id="-1521149880#qdytvf_384">rbd</span> command to perform.</p></li><li class="list-item" id="-1521149880#qdytvf_385"><p><span class="inline-code" id="-1521149880#qdytvf_386">&lt;pool_name&gt;</span> signifies the pool name where the snapshot is stored.</p></li><li class="list-item" id="-1521149880#qdytvf_387"><p><span class="inline-code" id="-1521149880#qdytvf_388">&lt;vm_snapshot_name&gt;</span> the snapshot which reqds the checksum operation</p></li></ol></section></section><section><h2 id="-1521149880#verify" data-toc="verify#API-quickstart.md-verify">verify</h2><p id="-1521149880#qdytvf_389">Verifies the integrity of a snapshot by comparing its current checksum with the saved checksum from DC and DR log files.</p><div class="detached code-block" id="-1521149880#qdytvf_390"><pre><code class="language-bash">cda verify &lt;export/export-diff&gt; &lt;dc_log_file&gt; &lt;dr_log_file&gt; &lt;pool_name&gt; &lt;image_name&gt;</code></pre></div><section><h3 id="-1521149880#description" data-toc="description#API-quickstart.md-description">Description</h3><p id="-1521149880#qdytvf_391">Verifies the integrity of the given snapshot by comparing the current checksum with the ones stored in the DC and DR log files. This ensures the snapshot has not been altered since the last recorded checksum.</p><ol class="list list-decimal" id="-1521149880#qdytvf_392" type="1" start="1"><li class="list-item" id="-1521149880#qdytvf_393"><p><span class="inline-code" id="-1521149880#qdytvf_394">&lt;export/export-diff&gt;</span> specifies whether to use export or export-diff.</p></li><li class="list-item" id="-1521149880#qdytvf_395"><p><span class="inline-code" id="-1521149880#qdytvf_396">&lt;dc_log_file&gt;</span> specifies the path to the DC log file.</p></li><li class="list-item" id="-1521149880#qdytvf_397"><p><span class="inline-code" id="-1521149880#qdytvf_398">&lt;dr_log_file&gt;</span> specifies the path to the DR log file.</p></li><li class="list-item" id="-1521149880#qdytvf_399"><p><span class="inline-code" id="-1521149880#qdytvf_400">&lt;pool_name&gt;</span> signifies the pool name where the snapshot is stored.</p></li><li class="list-item" id="-1521149880#qdytvf_401"><p><span class="inline-code" id="-1521149880#qdytvf_402">&lt;image_name&gt;</span> the snapshot to verify.</p></li></ol><p id="-1521149880#qdytvf_403">Example :</p><div class="detached code-block" id="-1521149880#qdytvf_404"><pre><code class="language-bash">cda verify export /path/to/dc/logfile /path/to/dr/logfile mypool mysnapshot</code></pre></div></section></section><section><h2 id="-1521149880#completion" data-toc="completion#API-quickstart.md-completion">completion</h2><p id="-1521149880#qdytvf_405">Generates the autocompletion script for the specified shell.</p><div class="detached code-block" id="-1521149880#qdytvf_406"><pre><code class="language-bash">cda completion [shell]</code></pre></div><section><h3 id="-1521149880#description" data-toc="description#API-quickstart.md-description">Description</h3><p id="-1521149880#qdytvf_407">Generates a script that enables autocompletion for the cda commands in the specified shell.</p><ol class="list list-decimal" id="-1521149880#qdytvf_408" type="1" start="1"><li class="list-item" id="-1521149880#qdytvf_409"><p><span class="inline-code" id="-1521149880#qdytvf_410">[shell]</span> is the optional argument to specify the shell type (e.g., bash, zsh). If not specified, it will generate for the default shell. Example</p></li></ol><div class="detached code-block" id="-1521149880#qdytvf_411"><pre><code class="language-bash">cda completion zsh
+cda completion bash</code></pre></div></section></section><section><h2 id="-1521149880#help" data-toc="help#API-quickstart.md-help">help</h2><p id="-1521149880#qdytvf_412">Displays help information about cda commands.</p><div class="detached code-block" id="-1521149880#qdytvf_413"><pre><code class="language-bash">cda help &lt;command&gt;</code></pre></div><section><h3 id="-1521149880#description" data-toc="description#API-quickstart.md-description">Description</h3><p id="-1521149880#qdytvf_414">Provides detailed help and usage information for any specific cda command.</p><ol class="list list-decimal" id="-1521149880#qdytvf_415" type="1" start="1"><li class="list-item" id="-1521149880#qdytvf_416"><p><span class="inline-code" id="-1521149880#qdytvf_417">&lt;command&gt;</span> is the command for which help is required. Example</p></li></ol><div class="detached code-block" id="-1521149880#qdytvf_418"><pre><code class="language-bash">cda help check
+cda help verify</code></pre></div></section></section></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="633564984">API Reference</h1><p id="633564984#-23v0tt_11">This is a sample Pet Store Server based on the OpenAPI 3.0 specification.</p><blockquote class="prompt flex bordered-element-rounded note detached">
+  <svg xmlns="http://www.w3.org/2000/svg" class="prompt-icon">
+    <path d="M21 12a9 9 0 1 1-9-9 9 9 0 0 1 9 9zM10.5 7.5A1.5 1.5 0 1 0 12 6a1.5 1.5 0 0 0-1.5 1.5zm-.5 3.54v1h1V18h2v-6a.96.96 0 0 0-.96-.96z"></path>
+  </svg>
+  <div class="prompt-content prompt-content-p"><p id="633564984#-23v0tt_13">A very important note about this API.</p></div>
+</blockquote></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="80127">Pet</h1><section><h2 id="80127#-70r8z0_261" data-toc="-70r8z0_261#Pet.md--70r8z0_261">Update an existing pet</h2><div class="api-endpoint"><img class="inline-icon image image-container" src="https://img.shields.io/badge/-PUT-FC801D" title="PUT method"><span class="api-path">/pet</span></div><p id="80127#-70r8z0_263">Update an existing pet by Id</p><section><h3 id="80127#-70r8z0_264" data-toc="-70r8z0_264#Pet.md--70r8z0_264">Request parameters</h3><div class="detached"><div class="api-section"><p><b>Body</b></p><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">application/json</b><span class="api-grey-text">Pet</span><span class="api-required">required</span></p><p class="api-content-type">Child attributes</p><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">id</b><span class="api-grey-text">integer int64</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">name</b><span class="api-grey-text">string</span><span class="api-required">required</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">category</b><span class="api-grey-text">Category</span></p><p class="api-content-type">Child attributes</p><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">id</b><span class="api-grey-text">integer int64</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">name</b><span class="api-grey-text">string</span></p></div></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">photoUrls</b><span class="api-grey-text">Array of string</span><span class="api-required">required</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">tags</b><span class="api-grey-text">Array of Tag</span></p><p class="api-content-type">Child attributes</p><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">id</b><span class="api-grey-text">integer int64</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">name</b><span class="api-grey-text">string</span></p></div></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">status</b><span class="api-grey-text">Enum</span></p><p>pet status in the store</p><p class="api-content-type">Enum elements</p><div class="api-block api-grey-block"><p>available, pending, sold</p></div></div></div></div><div><p><b>JSON example</b></p><div class="code-block detached" id="-70r8z0_266"><pre><code class="language-json">{
+  &quot;id&quot;: 10,
+  &quot;name&quot;: &quot;doggie&quot;,
+  &quot;category&quot;: {
+    &quot;id&quot;: 1,
+    &quot;name&quot;: &quot;Dogs&quot;
+  },
+  &quot;photoUrls&quot;: [
+    &quot;example&quot;
+  ],
+  &quot;tags&quot;: [
+    {
+      &quot;id&quot;: 55,
+      &quot;name&quot;: &quot;example&quot;
+    }
+  ],
+  &quot;status&quot;: &quot;available&quot;
+}</code></pre></div></div></div></section><section><h3 id="80127#-70r8z0_267" data-toc="-70r8z0_267#Pet.md--70r8z0_267">Responses</h3><section class="api-section"><div class="api-block api-grey-block"><p><span class="api-status-code api-code-green">200</span><b>Successful operation</b></p><p class="api-content-type"><span><b>Content type</b></span><span class="api-path api-grey-text">application/json</span></p><p>Successful operation</p><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">application/json</b><span class="api-grey-text">Pet</span></p><p class="api-content-type">Child attributes</p><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">id</b><span class="api-grey-text">integer int64</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">name</b><span class="api-grey-text">string</span><span class="api-required">required</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">category</b><span class="api-grey-text">Category</span></p><p class="api-content-type">Child attributes</p><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">id</b><span class="api-grey-text">integer int64</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">name</b><span class="api-grey-text">string</span></p></div></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">photoUrls</b><span class="api-grey-text">Array of string</span><span class="api-required">required</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">tags</b><span class="api-grey-text">Array of Tag</span></p><p class="api-content-type">Child attributes</p><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">id</b><span class="api-grey-text">integer int64</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">name</b><span class="api-grey-text">string</span></p></div></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">status</b><span class="api-grey-text">Enum</span></p><p>pet status in the store</p><p class="api-content-type">Enum elements</p><div class="api-block api-white-block"><p>available, pending, sold</p></div></div></div></div><div><p><b>JSON example</b></p><div class="code-block detached" id="-70r8z0_269"><pre><code class="language-json">{
+  &quot;id&quot;: 10,
+  &quot;name&quot;: &quot;doggie&quot;,
+  &quot;category&quot;: {
+    &quot;id&quot;: 1,
+    &quot;name&quot;: &quot;Dogs&quot;
+  },
+  &quot;photoUrls&quot;: [
+    &quot;example&quot;
+  ],
+  &quot;tags&quot;: [
+    {
+      &quot;id&quot;: 55,
+      &quot;name&quot;: &quot;example&quot;
+    }
+  ],
+  &quot;status&quot;: &quot;available&quot;
+}</code></pre></div></div></section><section class="api-section"><div class="api-block api-grey-block"><p><span class="api-status-code api-code-red">400</span><b>Invalid ID supplied</b></p><p class="api-content-type"><span><b>Content type</b></span></p><p>Invalid ID supplied</p></div></section><section class="api-section"><div class="api-block api-grey-block"><p><span class="api-status-code api-code-red">404</span><b>Pet not found</b></p><p class="api-content-type"><span><b>Content type</b></span></p><p>Pet not found</p></div></section><section class="api-section"><div class="api-block api-grey-block"><p><span class="api-status-code api-code-red">405</span><b>Validation exception</b></p><p class="api-content-type"><span><b>Content type</b></span></p><p>Validation exception</p></div></section></section></section><section><h2 id="80127#-70r8z0_277" data-toc="-70r8z0_277#Pet.md--70r8z0_277">Add a new pet to the store</h2><div class="api-endpoint"><img class="inline-icon image image-container" src="https://img.shields.io/badge/-POST-28B8A0" title="POST method"><span class="api-path">/pet</span></div><p id="80127#-70r8z0_279">Add a new pet to the store</p><section><h3 id="80127#-70r8z0_280" data-toc="-70r8z0_280#Pet.md--70r8z0_280">Request parameters</h3><div class="detached"><div class="api-section"><p><b>Body</b></p><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">application/json</b><span class="api-grey-text">Pet</span><span class="api-required">required</span></p><p class="api-content-type">Child attributes</p><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">id</b><span class="api-grey-text">integer int64</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">name</b><span class="api-grey-text">string</span><span class="api-required">required</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">category</b><span class="api-grey-text">Category</span></p><p class="api-content-type">Child attributes</p><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">id</b><span class="api-grey-text">integer int64</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">name</b><span class="api-grey-text">string</span></p></div></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">photoUrls</b><span class="api-grey-text">Array of string</span><span class="api-required">required</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">tags</b><span class="api-grey-text">Array of Tag</span></p><p class="api-content-type">Child attributes</p><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">id</b><span class="api-grey-text">integer int64</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">name</b><span class="api-grey-text">string</span></p></div></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">status</b><span class="api-grey-text">Enum</span></p><p>pet status in the store</p><p class="api-content-type">Enum elements</p><div class="api-block api-grey-block"><p>available, pending, sold</p></div></div></div></div><div><p><b>JSON example</b></p><div class="code-block detached" id="-70r8z0_282"><pre><code class="language-json">{
+  &quot;id&quot;: 10,
+  &quot;name&quot;: &quot;doggie&quot;,
+  &quot;category&quot;: {
+    &quot;id&quot;: 1,
+    &quot;name&quot;: &quot;Dogs&quot;
+  },
+  &quot;photoUrls&quot;: [
+    &quot;example&quot;
+  ],
+  &quot;tags&quot;: [
+    {
+      &quot;id&quot;: 55,
+      &quot;name&quot;: &quot;example&quot;
+    }
+  ],
+  &quot;status&quot;: &quot;available&quot;
+}</code></pre></div></div></div></section><section><h3 id="80127#-70r8z0_283" data-toc="-70r8z0_283#Pet.md--70r8z0_283">Responses</h3><section class="api-section"><div class="api-block api-grey-block"><p><span class="api-status-code api-code-green">200</span><b>Successful operation</b></p><p class="api-content-type"><span><b>Content type</b></span><span class="api-path api-grey-text">application/json</span></p><p>Successful operation</p><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">application/json</b><span class="api-grey-text">Pet</span></p><p class="api-content-type">Child attributes</p><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">id</b><span class="api-grey-text">integer int64</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">name</b><span class="api-grey-text">string</span><span class="api-required">required</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">category</b><span class="api-grey-text">Category</span></p><p class="api-content-type">Child attributes</p><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">id</b><span class="api-grey-text">integer int64</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">name</b><span class="api-grey-text">string</span></p></div></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">photoUrls</b><span class="api-grey-text">Array of string</span><span class="api-required">required</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">tags</b><span class="api-grey-text">Array of Tag</span></p><p class="api-content-type">Child attributes</p><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">id</b><span class="api-grey-text">integer int64</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">name</b><span class="api-grey-text">string</span></p></div></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">status</b><span class="api-grey-text">Enum</span></p><p>pet status in the store</p><p class="api-content-type">Enum elements</p><div class="api-block api-white-block"><p>available, pending, sold</p></div></div></div></div><div><p><b>JSON example</b></p><div class="code-block detached" id="-70r8z0_285"><pre><code class="language-json">{
+  &quot;id&quot;: 10,
+  &quot;name&quot;: &quot;doggie&quot;,
+  &quot;category&quot;: {
+    &quot;id&quot;: 1,
+    &quot;name&quot;: &quot;Dogs&quot;
+  },
+  &quot;photoUrls&quot;: [
+    &quot;example&quot;
+  ],
+  &quot;tags&quot;: [
+    {
+      &quot;id&quot;: 55,
+      &quot;name&quot;: &quot;example&quot;
+    }
+  ],
+  &quot;status&quot;: &quot;available&quot;
+}</code></pre></div></div></section><section class="api-section"><div class="api-block api-grey-block"><p><span class="api-status-code api-code-red">405</span><b>Invalid input</b></p><p class="api-content-type"><span><b>Content type</b></span></p><p>Invalid input</p></div></section></section></section><section><h2 id="80127#-70r8z0_291" data-toc="-70r8z0_291#Pet.md--70r8z0_291">Find pets by status</h2><div class="api-endpoint"><img class="inline-icon image image-container" src="https://img.shields.io/badge/-GET-167DFF" title="GET method"><span class="api-path">/pet/findByStatus</span></div><p id="80127#-70r8z0_293">Multiple status values can be provided with comma separated strings</p><section><h3 id="80127#-70r8z0_294" data-toc="-70r8z0_294#Pet.md--70r8z0_294">Request parameters</h3><div class="detached"><div class="api-section"><p><b>Query</b></p><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">status</b><span class="api-grey-text">Enum</span></p><p>Status values that need to be considered for filter</p><p class="api-content-type">Enum elements</p><div class="api-block api-white-block"><p>available, pending, sold</p></div></div></div></div></section><section><h3 id="80127#-70r8z0_296" data-toc="-70r8z0_296#Pet.md--70r8z0_296">Responses</h3><section class="api-section"><div class="api-block api-grey-block"><p><span class="api-status-code api-code-green">200</span><b>successful operation</b></p><p class="api-content-type"><span><b>Content type</b></span><span class="api-path api-grey-text">application/json</span></p><p>successful operation</p><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">application/json</b><span class="api-grey-text">Array of Pet</span></p><p class="api-content-type">Child attributes</p><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">id</b><span class="api-grey-text">integer int64</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">name</b><span class="api-grey-text">string</span><span class="api-required">required</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">category</b><span class="api-grey-text">Category</span></p><p class="api-content-type">Child attributes</p><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">id</b><span class="api-grey-text">integer int64</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">name</b><span class="api-grey-text">string</span></p></div></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">photoUrls</b><span class="api-grey-text">Array of string</span><span class="api-required">required</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">tags</b><span class="api-grey-text">Array of Tag</span></p><p class="api-content-type">Child attributes</p><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">id</b><span class="api-grey-text">integer int64</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">name</b><span class="api-grey-text">string</span></p></div></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">status</b><span class="api-grey-text">Enum</span></p><p>pet status in the store</p><p class="api-content-type">Enum elements</p><div class="api-block api-white-block"><p>available, pending, sold</p></div></div></div></div><div><p><b>JSON example</b></p><div class="code-block detached" id="-70r8z0_298"><pre><code class="language-json">[
+  {
+    &quot;id&quot;: 10,
+    &quot;name&quot;: &quot;doggie&quot;,
+    &quot;category&quot;: {
+      &quot;id&quot;: 1,
+      &quot;name&quot;: &quot;Dogs&quot;
+    },
+    &quot;photoUrls&quot;: [
+      &quot;example&quot;
+    ],
+    &quot;tags&quot;: [
+      {
+        &quot;id&quot;: 55,
+        &quot;name&quot;: &quot;example&quot;
+      }
+    ],
+    &quot;status&quot;: &quot;available&quot;
+  }
+]</code></pre></div></div></section><section class="api-section"><div class="api-block api-grey-block"><p><span class="api-status-code api-code-red">400</span><b>Invalid status value</b></p><p class="api-content-type"><span><b>Content type</b></span></p><p>Invalid status value</p></div></section></section></section><section><h2 id="80127#-70r8z0_304" data-toc="-70r8z0_304#Pet.md--70r8z0_304">Finds pets by tags</h2><div class="api-endpoint"><img class="inline-icon image image-container" src="https://img.shields.io/badge/-GET-167DFF" title="GET method"><span class="api-path">/pet/findByTags</span></div><p id="80127#-70r8z0_306">Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.</p><section><h3 id="80127#-70r8z0_307" data-toc="-70r8z0_307#Pet.md--70r8z0_307">Request parameters</h3><div class="detached"><div class="api-section"><p><b>Query</b></p><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">tags</b><span class="api-grey-text">Array of string</span></p><p>Tags to filter by</p></div></div></div></section><section><h3 id="80127#-70r8z0_309" data-toc="-70r8z0_309#Pet.md--70r8z0_309">Responses</h3><section class="api-section"><div class="api-block api-grey-block"><p><span class="api-status-code api-code-green">200</span><b>successful operation</b></p><p class="api-content-type"><span><b>Content type</b></span><span class="api-path api-grey-text">application/json</span></p><p>successful operation</p><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">application/json</b><span class="api-grey-text">Array of Pet</span></p><p class="api-content-type">Child attributes</p><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">id</b><span class="api-grey-text">integer int64</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">name</b><span class="api-grey-text">string</span><span class="api-required">required</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">category</b><span class="api-grey-text">Category</span></p><p class="api-content-type">Child attributes</p><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">id</b><span class="api-grey-text">integer int64</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">name</b><span class="api-grey-text">string</span></p></div></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">photoUrls</b><span class="api-grey-text">Array of string</span><span class="api-required">required</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">tags</b><span class="api-grey-text">Array of Tag</span></p><p class="api-content-type">Child attributes</p><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">id</b><span class="api-grey-text">integer int64</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">name</b><span class="api-grey-text">string</span></p></div></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">status</b><span class="api-grey-text">Enum</span></p><p>pet status in the store</p><p class="api-content-type">Enum elements</p><div class="api-block api-white-block"><p>available, pending, sold</p></div></div></div></div><div><p><b>JSON example</b></p><div class="code-block detached" id="-70r8z0_311"><pre><code class="language-json">[
+  {
+    &quot;id&quot;: 10,
+    &quot;name&quot;: &quot;doggie&quot;,
+    &quot;category&quot;: {
+      &quot;id&quot;: 1,
+      &quot;name&quot;: &quot;Dogs&quot;
+    },
+    &quot;photoUrls&quot;: [
+      &quot;example&quot;
+    ],
+    &quot;tags&quot;: [
+      {
+        &quot;id&quot;: 55,
+        &quot;name&quot;: &quot;example&quot;
+      }
+    ],
+    &quot;status&quot;: &quot;available&quot;
+  }
+]</code></pre></div></div></section><section class="api-section"><div class="api-block api-grey-block"><p><span class="api-status-code api-code-red">400</span><b>Invalid tag value</b></p><p class="api-content-type"><span><b>Content type</b></span></p><p>Invalid tag value</p></div></section></section></section><section><h2 id="80127#-70r8z0_318" data-toc="-70r8z0_318#Pet.md--70r8z0_318">Find pet by ID</h2><div class="api-endpoint"><img class="inline-icon image image-container" src="https://img.shields.io/badge/-GET-167DFF" title="GET method"><span class="api-path">/pet/{petId}</span></div><p id="80127#-70r8z0_320">Returns a single pet</p><section><h3 id="80127#-70r8z0_321" data-toc="-70r8z0_321#Pet.md--70r8z0_321">Request parameters</h3><div class="detached"><div class="api-section"><p><b>Path</b></p><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">petId</b><span class="api-grey-text">integer int64</span><span class="api-required">required</span></p><p>ID of pet to return</p></div></div></div></section><section><h3 id="80127#-70r8z0_323" data-toc="-70r8z0_323#Pet.md--70r8z0_323">Responses</h3><section class="api-section"><div class="api-block api-grey-block"><p><span class="api-status-code api-code-green">200</span><b>successful operation</b></p><p class="api-content-type"><span><b>Content type</b></span><span class="api-path api-grey-text">application/json</span></p><p>successful operation</p><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">application/json</b><span class="api-grey-text">Pet</span></p><p class="api-content-type">Child attributes</p><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">id</b><span class="api-grey-text">integer int64</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">name</b><span class="api-grey-text">string</span><span class="api-required">required</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">category</b><span class="api-grey-text">Category</span></p><p class="api-content-type">Child attributes</p><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">id</b><span class="api-grey-text">integer int64</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">name</b><span class="api-grey-text">string</span></p></div></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">photoUrls</b><span class="api-grey-text">Array of string</span><span class="api-required">required</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">tags</b><span class="api-grey-text">Array of Tag</span></p><p class="api-content-type">Child attributes</p><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">id</b><span class="api-grey-text">integer int64</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">name</b><span class="api-grey-text">string</span></p></div></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">status</b><span class="api-grey-text">Enum</span></p><p>pet status in the store</p><p class="api-content-type">Enum elements</p><div class="api-block api-white-block"><p>available, pending, sold</p></div></div></div></div><div><p><b>JSON example</b></p><div class="code-block detached" id="-70r8z0_325"><pre><code class="language-json">{
+  &quot;id&quot;: 10,
+  &quot;name&quot;: &quot;doggie&quot;,
+  &quot;category&quot;: {
+    &quot;id&quot;: 1,
+    &quot;name&quot;: &quot;Dogs&quot;
+  },
+  &quot;photoUrls&quot;: [
+    &quot;example&quot;
+  ],
+  &quot;tags&quot;: [
+    {
+      &quot;id&quot;: 55,
+      &quot;name&quot;: &quot;example&quot;
+    }
+  ],
+  &quot;status&quot;: &quot;available&quot;
+}</code></pre></div></div></section><section class="api-section"><div class="api-block api-grey-block"><p><span class="api-status-code api-code-red">400</span><b>Invalid ID supplied</b></p><p class="api-content-type"><span><b>Content type</b></span></p><p>Invalid ID supplied</p></div></section><section class="api-section"><div class="api-block api-grey-block"><p><span class="api-status-code api-code-red">404</span><b>Pet not found</b></p><p class="api-content-type"><span><b>Content type</b></span></p><p>Pet not found</p></div></section></section></section><section><h2 id="80127#-70r8z0_332" data-toc="-70r8z0_332#Pet.md--70r8z0_332">Update a pet in the store with form data</h2><div class="api-endpoint"><img class="inline-icon image image-container" src="https://img.shields.io/badge/-POST-28B8A0" title="POST method"><span class="api-path">/pet/{petId}</span></div><p id="80127#-70r8z0_334"></p><section><h3 id="80127#-70r8z0_335" data-toc="-70r8z0_335#Pet.md--70r8z0_335">Request parameters</h3><div class="detached"><div class="api-section"><p><b>Path</b></p><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">petId</b><span class="api-grey-text">integer int64</span><span class="api-required">required</span></p><p>ID of pet that needs to be updated</p></div></div><div class="api-section"><p><b>Query</b></p><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">name</b><span class="api-grey-text">string</span></p><p>Name of pet that needs to be updated</p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">status</b><span class="api-grey-text">string</span></p><p>Status of pet that needs to be updated</p></div></div></div></section><section><h3 id="80127#-70r8z0_338" data-toc="-70r8z0_338#Pet.md--70r8z0_338">Responses</h3><section class="api-section"><div class="api-block api-grey-block"><p><span class="api-status-code api-code-red">405</span><b>Invalid input</b></p><p class="api-content-type"><span><b>Content type</b></span></p><p>Invalid input</p></div></section></section></section><section><h2 id="80127#-70r8z0_344" data-toc="-70r8z0_344#Pet.md--70r8z0_344">Delete a pet</h2><div class="api-endpoint"><img class="inline-icon image image-container" src="https://img.shields.io/badge/-DELETE-FF318C" title="DELETE method"><span class="api-path">/pet/{petId}</span></div><p id="80127#-70r8z0_346"></p><section><h3 id="80127#-70r8z0_347" data-toc="-70r8z0_347#Pet.md--70r8z0_347">Request parameters</h3><div class="detached"><div class="api-section"><p><b>Header</b></p><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">api_key</b><span class="api-grey-text">string</span></p><p></p></div></div><div class="api-section"><p><b>Path</b></p><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">petId</b><span class="api-grey-text">integer int64</span><span class="api-required">required</span></p><p>Pet id to delete</p></div></div></div></section><section><h3 id="80127#-70r8z0_350" data-toc="-70r8z0_350#Pet.md--70r8z0_350">Responses</h3><section class="api-section"><div class="api-block api-grey-block"><p><span class="api-status-code api-code-red">400</span><b>Invalid pet value</b></p><p class="api-content-type"><span><b>Content type</b></span></p><p>Invalid pet value</p></div></section></section></section><section><h2 id="80127#-70r8z0_357" data-toc="-70r8z0_357#Pet.md--70r8z0_357">Upload an image</h2><div class="api-endpoint"><img class="inline-icon image image-container" src="https://img.shields.io/badge/-POST-28B8A0" title="POST method"><span class="api-path">/pet/{petId}/uploadImage</span></div><p id="80127#-70r8z0_359"></p><section><h3 id="80127#-70r8z0_360" data-toc="-70r8z0_360#Pet.md--70r8z0_360">Request parameters</h3><div class="detached"><div class="api-section"><p><b>Path</b></p><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">petId</b><span class="api-grey-text">integer int64</span><span class="api-required">required</span></p><p>ID of pet to update</p></div></div><div class="api-section"><p><b>Query</b></p><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">additionalMetadata</b><span class="api-grey-text">string</span></p><p>Additional Metadata</p></div></div><div class="api-section"><p><b>Body</b></p><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">application/octet-stream</b><span class="api-grey-text">string binary</span></p></div></div></div></section><section><h3 id="80127#-70r8z0_364" data-toc="-70r8z0_364#Pet.md--70r8z0_364">Responses</h3><section class="api-section"><div class="api-block api-grey-block"><p><span class="api-status-code api-code-green">200</span><b>successful operation</b></p><p class="api-content-type"><span><b>Content type</b></span><span class="api-path api-grey-text">application/json</span></p><p>successful operation</p><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">application/json</b><span class="api-grey-text">ApiResponse</span></p><p class="api-content-type">Child attributes</p><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">code</b><span class="api-grey-text">integer int32</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">type</b><span class="api-grey-text">string</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">message</b><span class="api-grey-text">string</span></p></div></div></div><div><p><b>JSON example</b></p><div class="code-block detached" id="-70r8z0_366"><pre><code class="language-json">{
+  &quot;code&quot;: 81,
+  &quot;type&quot;: &quot;example&quot;,
+  &quot;message&quot;: &quot;example&quot;
+}</code></pre></div></div></section></section></section></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="1677777085">Find pet inventories by status</h1><div class="api-endpoint"><img class="inline-icon image image-container" src="https://img.shields.io/badge/-GET-167DFF" title="GET method"><span class="api-path">/store/inventory</span></div><p id="1677777085#-yn9jor_13">Returns a map of status codes to quantities</p><section><h2 id="1677777085#-yn9jor_14" data-toc="-yn9jor_14#Returns-pet-inventories-by-status.md--yn9jor_14">Responses</h2><section class="api-section"><div class="api-block api-grey-block"><p><span class="api-status-code api-code-green">200</span><b>successful operation</b></p><p class="api-content-type"><span><b>Content type</b></span><span class="api-path api-grey-text">application/json</span></p><p>successful operation</p><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">application/json</b><span class="api-grey-text">object</span></p><p class="api-content-type">Child attributes</p></div></div><div><p><b>JSON example</b></p><div class="code-block detached" id="-yn9jor_16"><pre><code class="language-json">{}</code></pre></div></div></section></section></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="914431222">Place order for pet</h1><div id="914431222#tx32my_34"><div class="detached" id="914431222#tx32my_35"><div class="tab-title"><div>v1</div></div><div class="bordered-element tab-content"><div class="api-endpoint"><img class="inline-icon image image-container" src="https://img.shields.io/badge/-POST-28B8A0" title="POST method"><span class="api-path">/store/order/v1</span></div><p id="914431222#tx32my_41">Place a new order in the store</p><section><h2 id="914431222#tx32my_42" data-toc="tx32my_42#Place-an-order-for-a-pet.md-tx32my_42">Request parameters</h2><div class="detached"><div class="api-section"><p><b>Body</b></p><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">application/json</b><span class="api-grey-text">Order</span></p><p class="api-content-type">Child attributes</p><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">id</b><span class="api-grey-text">integer int64</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">petId</b><span class="api-grey-text">integer int64</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">quantity</b><span class="api-grey-text">integer int32</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">shipDate</b><span class="api-grey-text">string date-time</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">status</b><span class="api-grey-text">Enum</span></p><p>Order Status</p><p class="api-content-type">Enum elements</p><div class="api-block api-grey-block"><p>placed, approved, delivered</p></div></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">complete</b><span class="api-grey-text">boolean</span></p></div></div></div><div><p><b>JSON example</b></p><div class="code-block detached" id="tx32my_44"><pre><code class="language-json">{
+  &quot;id&quot;: 10,
+  &quot;petId&quot;: 198772,
+  &quot;quantity&quot;: 7,
+  &quot;shipDate&quot;: &quot;1989-04-22T10:33:53Z&quot;,
+  &quot;status&quot;: &quot;approved&quot;,
+  &quot;complete&quot;: false
+}</code></pre></div></div></div></section><section><h2 id="914431222#tx32my_45" data-toc="tx32my_45#Place-an-order-for-a-pet.md-tx32my_45">Responses</h2><section class="api-section"><div class="api-block api-grey-block"><p><span class="api-status-code api-code-green">200</span><b>successful operation</b></p><p class="api-content-type"><span><b>Content type</b></span><span class="api-path api-grey-text">application/json</span></p><p>successful operation</p><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">application/json</b><span class="api-grey-text">Order</span></p><p class="api-content-type">Child attributes</p><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">id</b><span class="api-grey-text">integer int64</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">petId</b><span class="api-grey-text">integer int64</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">quantity</b><span class="api-grey-text">integer int32</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">shipDate</b><span class="api-grey-text">string date-time</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">status</b><span class="api-grey-text">Enum</span></p><p>Order Status</p><p class="api-content-type">Enum elements</p><div class="api-block api-white-block"><p>placed, approved, delivered</p></div></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">complete</b><span class="api-grey-text">boolean</span></p></div></div></div><div><p><b>JSON example</b></p><div class="code-block detached" id="tx32my_47"><pre><code class="language-json">{
+  &quot;id&quot;: 10,
+  &quot;petId&quot;: 198772,
+  &quot;quantity&quot;: 7,
+  &quot;shipDate&quot;: &quot;1989-04-22T10:33:53Z&quot;,
+  &quot;status&quot;: &quot;approved&quot;,
+  &quot;complete&quot;: false
+}</code></pre></div></div></section><section class="api-section"><div class="api-block api-grey-block"><p><span class="api-status-code api-code-red">405</span><b>Invalid input</b></p><p class="api-content-type"><span><b>Content type</b></span></p><p>Invalid input</p></div></section></section></div></div><div class="detached" id="914431222#tx32my_49"><div class="tab-title"><div>v2</div></div><div class="bordered-element tab-content"><div class="api-endpoint"><img class="inline-icon image image-container" src="https://img.shields.io/badge/-POST-28B8A0" title="POST method"><span class="api-path">/store/order/v2</span></div><p id="914431222#tx32my_56">Place a new order in the store with v2 endpoint</p><section><h2 id="914431222#tx32my_57" data-toc="tx32my_57#Place-an-order-for-a-pet.md-tx32my_57">Request parameters</h2><div class="detached"><div class="api-section"><p><b>Body</b></p><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">application/json</b><span class="api-grey-text">Order</span><span class="api-required">required</span></p><p class="api-content-type">Child attributes</p><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">id</b><span class="api-grey-text">integer int64</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">petId</b><span class="api-grey-text">integer int64</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">quantity</b><span class="api-grey-text">integer int32</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">shipDate</b><span class="api-grey-text">string date-time</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">status</b><span class="api-grey-text">Enum</span></p><p>Order Status</p><p class="api-content-type">Enum elements</p><div class="api-block api-grey-block"><p>placed, approved, delivered</p></div></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">complete</b><span class="api-grey-text">boolean</span></p></div></div></div><div><p><b>JSON example</b></p><div class="code-block detached" id="tx32my_59"><pre><code class="language-json">{
+  &quot;id&quot;: 10,
+  &quot;petId&quot;: 198772,
+  &quot;quantity&quot;: 7,
+  &quot;shipDate&quot;: &quot;1989-04-22T10:33:53Z&quot;,
+  &quot;status&quot;: &quot;approved&quot;,
+  &quot;complete&quot;: false
+}</code></pre></div></div></div></section><section><h2 id="914431222#tx32my_60" data-toc="tx32my_60#Place-an-order-for-a-pet.md-tx32my_60">Responses</h2><section class="api-section"><div class="api-block api-grey-block"><p><span class="api-status-code api-code-green">201</span><b>Order successfully placed</b></p><p class="api-content-type"><span><b>Content type</b></span><span class="api-path api-grey-text">application/json</span></p><p>Order successfully placed</p><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">application/json</b><span class="api-grey-text">Order</span></p><p class="api-content-type">Child attributes</p><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">id</b><span class="api-grey-text">integer int64</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">petId</b><span class="api-grey-text">integer int64</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">quantity</b><span class="api-grey-text">integer int32</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">shipDate</b><span class="api-grey-text">string date-time</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">status</b><span class="api-grey-text">Enum</span></p><p>Order Status</p><p class="api-content-type">Enum elements</p><div class="api-block api-white-block"><p>placed, approved, delivered</p></div></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">complete</b><span class="api-grey-text">boolean</span></p></div></div></div><div><p><b>JSON example</b></p><div class="code-block detached" id="tx32my_62"><pre><code class="language-json">{
+  &quot;id&quot;: 10,
+  &quot;petId&quot;: 198772,
+  &quot;quantity&quot;: 7,
+  &quot;shipDate&quot;: &quot;1989-04-22T10:33:53Z&quot;,
+  &quot;status&quot;: &quot;approved&quot;,
+  &quot;complete&quot;: false
+}</code></pre></div></div></section><section class="api-section"><div class="api-block api-grey-block"><p><span class="api-status-code api-code-red">400</span><b>Bad request</b></p><p class="api-content-type"><span><b>Content type</b></span></p><p>Bad request</p></div></section><section class="api-section"><div class="api-block api-grey-block"><p><span class="api-status-code api-code-red">405</span><b>Invalid input</b></p><p class="api-content-type"><span><b>Content type</b></span></p><p>Invalid input</p></div></section></section></div></div></div></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="-269727814">Find purchase order by ID</h1><div class="api-endpoint"><img class="inline-icon image image-container" src="https://img.shields.io/badge/-GET-167DFF" title="GET method"><span class="api-path">/store/order/{orderId}</span></div><p id="-269727814#-8u8meg_23">For valid response try integer IDs with value less than 5 or &gt; 10. Other values will generate exceptions.</p><section><h2 id="-269727814#-8u8meg_24" data-toc="-8u8meg_24#Find-purchase-order-by-ID.md--8u8meg_24">Request parameters</h2><div class="detached"><div class="api-section"><p><b>Path</b></p><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">orderId</b><span class="api-grey-text">integer int64</span><span class="api-required">required</span></p><p>ID of order that needs to be fetched</p></div></div></div></section><section><h2 id="-269727814#-8u8meg_26" data-toc="-8u8meg_26#Find-purchase-order-by-ID.md--8u8meg_26">Responses</h2><section class="api-section"><div class="api-block api-grey-block"><p><span class="api-status-code api-code-green">200</span><b>successful operation</b></p><p class="api-content-type"><span><b>Content type</b></span><span class="api-path api-grey-text">application/json</span></p><p>successful operation</p><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">application/json</b><span class="api-grey-text">Order</span></p><p class="api-content-type">Child attributes</p><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">id</b><span class="api-grey-text">integer int64</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">petId</b><span class="api-grey-text">integer int64</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">quantity</b><span class="api-grey-text">integer int32</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">shipDate</b><span class="api-grey-text">string date-time</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">status</b><span class="api-grey-text">Enum</span></p><p>Order Status</p><p class="api-content-type">Enum elements</p><div class="api-block api-white-block"><p>placed, approved, delivered</p></div></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">complete</b><span class="api-grey-text">boolean</span></p></div></div></div><div><p><b>JSON example</b></p><div class="code-block detached" id="-8u8meg_28"><pre><code class="language-json">{
+  &quot;id&quot;: 10,
+  &quot;petId&quot;: 198772,
+  &quot;quantity&quot;: 7,
+  &quot;shipDate&quot;: &quot;1989-04-22T10:33:53Z&quot;,
+  &quot;status&quot;: &quot;approved&quot;,
+  &quot;complete&quot;: false
+}</code></pre></div></div></section><section class="api-section"><div class="api-block api-grey-block"><p><span class="api-status-code api-code-red">400</span><b>Invalid ID supplied</b></p><p class="api-content-type"><span><b>Content type</b></span></p><p>Invalid ID supplied</p></div></section><section class="api-section"><div class="api-block api-grey-block"><p><span class="api-status-code api-code-red">404</span><b>Order not found</b></p><p class="api-content-type"><span><b>Content type</b></span></p><p>Order not found</p></div></section></section></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="-687404280">Delete purchase order by ID</h1><div class="api-endpoint"><img class="inline-icon image image-container" src="https://img.shields.io/badge/-DELETE-FF318C" title="DELETE method"><span class="api-path">/store/order/{orderId}</span></div><p id="-687404280#-ubni9o_19">For valid response try integer IDs with value &lt; 1000. Anything above 1000 or nonintegers will generate API errors</p><section><h2 id="-687404280#-ubni9o_20" data-toc="-ubni9o_20#Delete-purchase-order-by-ID.md--ubni9o_20">Request parameters</h2><div class="detached"><div class="api-section"><p><b>Path</b></p><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">orderId</b><span class="api-grey-text">integer int64</span><span class="api-required">required</span></p><p>ID of the order that needs to be deleted</p></div></div></div></section><section><h2 id="-687404280#-ubni9o_22" data-toc="-ubni9o_22#Delete-purchase-order-by-ID.md--ubni9o_22">Responses</h2><section class="api-section"><div class="api-block api-grey-block"><p><span class="api-status-code api-code-red">400</span><b>Invalid ID supplied</b></p><p class="api-content-type"><span><b>Content type</b></span></p><p>Invalid ID supplied</p></div></section><section class="api-section"><div class="api-block api-grey-block"><p><span class="api-status-code api-code-red">404</span><b>Order not found</b></p><p class="api-content-type"><span><b>Content type</b></span></p><p>Order not found</p></div></section></section></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="1128157660">Create user</h1><div class="api-endpoint"><img class="inline-icon image image-container" src="https://img.shields.io/badge/-POST-28B8A0" title="POST method"><span class="api-path">/user</span></div><p id="1128157660#awddz6_18">This can only be done by the logged in user.</p><section><h2 id="1128157660#awddz6_19" data-toc="awddz6_19#Create-user.md-awddz6_19">Request parameters</h2><div class="detached"><div class="api-section"><p><b>Body</b></p><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">application/json</b><span class="api-grey-text">User</span></p><p class="api-content-type">Child attributes</p><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">id</b><span class="api-grey-text">integer int64</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">username</b><span class="api-grey-text">string</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">firstName</b><span class="api-grey-text">string</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">lastName</b><span class="api-grey-text">string</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">email</b><span class="api-grey-text">string</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">password</b><span class="api-grey-text">string</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">phone</b><span class="api-grey-text">string</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">userStatus</b><span class="api-grey-text">integer int32</span></p><p>User Status</p></div></div></div><div><p><b>JSON example</b></p><div class="code-block detached" id="awddz6_21"><pre><code class="language-json">{
+  &quot;id&quot;: 10,
+  &quot;username&quot;: &quot;theUser&quot;,
+  &quot;firstName&quot;: &quot;John&quot;,
+  &quot;lastName&quot;: &quot;James&quot;,
+  &quot;email&quot;: &quot;john@email.com&quot;,
+  &quot;password&quot;: &quot;12345&quot;,
+  &quot;phone&quot;: &quot;12345&quot;,
+  &quot;userStatus&quot;: 1
+}</code></pre></div></div></div></section><section><h2 id="1128157660#awddz6_22" data-toc="awddz6_22#Create-user.md-awddz6_22">Responses</h2><section class="api-section"><div class="api-block api-grey-block"><p><span class="api-status-code api-code-green">default</span><b>successful operation</b></p><p class="api-content-type"><span><b>Content type</b></span><span class="api-path api-grey-text">application/json</span></p><p>successful operation</p><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">application/json</b><span class="api-grey-text">User</span></p><p class="api-content-type">Child attributes</p><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">id</b><span class="api-grey-text">integer int64</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">username</b><span class="api-grey-text">string</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">firstName</b><span class="api-grey-text">string</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">lastName</b><span class="api-grey-text">string</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">email</b><span class="api-grey-text">string</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">password</b><span class="api-grey-text">string</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">phone</b><span class="api-grey-text">string</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">userStatus</b><span class="api-grey-text">integer int32</span></p><p>User Status</p></div></div></div><div><p><b>JSON example</b></p><div class="code-block detached" id="awddz6_24"><pre><code class="language-json">{
+  &quot;id&quot;: 11,
+  &quot;username&quot;: &quot;theUser&quot;,
+  &quot;firstName&quot;: &quot;John&quot;,
+  &quot;lastName&quot;: &quot;Doe&quot;,
+  &quot;email&quot;: &quot;john@email.com&quot;,
+  &quot;password&quot;: &quot;12345&quot;,
+  &quot;phone&quot;: &quot;12345&quot;,
+  &quot;userStatus&quot;: 1
+}</code></pre></div></div></section></section></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="-319361887">Create list of users with given input array</h1><div class="api-endpoint"><img class="inline-icon image image-container" src="https://img.shields.io/badge/-POST-28B8A0" title="POST method"><span class="api-path">/user/createWithList</span></div><p id="-319361887#-chxg5j_25">Creates list of users with given input array</p><section><h2 id="-319361887#-chxg5j_26" data-toc="-chxg5j_26#Creates-list-of-users-with-given-input-array.md--chxg5j_26">Request parameters</h2><div class="detached"><div class="api-section"><p><b>Body</b></p><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">application/json</b><span class="api-grey-text">Array of User</span></p><p class="api-content-type">Child attributes</p><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">id</b><span class="api-grey-text">integer int64</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">username</b><span class="api-grey-text">string</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">firstName</b><span class="api-grey-text">string</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">lastName</b><span class="api-grey-text">string</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">email</b><span class="api-grey-text">string</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">password</b><span class="api-grey-text">string</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">phone</b><span class="api-grey-text">string</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">userStatus</b><span class="api-grey-text">integer int32</span></p><p>User Status</p></div></div></div><div><p><b>JSON example</b></p><div class="code-block detached" id="-chxg5j_28"><pre><code class="language-json">[
+  {
+    &quot;id&quot;: 10,
+    &quot;username&quot;: &quot;theUser&quot;,
+    &quot;firstName&quot;: &quot;John&quot;,
+    &quot;lastName&quot;: &quot;James&quot;,
+    &quot;email&quot;: &quot;john@email.com&quot;,
+    &quot;password&quot;: &quot;12345&quot;,
+    &quot;phone&quot;: &quot;12345&quot;,
+    &quot;userStatus&quot;: 1
+  }
+]</code></pre></div></div></div></section><section><h2 id="-319361887#-chxg5j_29" data-toc="-chxg5j_29#Creates-list-of-users-with-given-input-array.md--chxg5j_29">Responses</h2><section class="api-section"><div class="api-block api-grey-block"><p><span class="api-status-code api-code-green">200</span><b>Successful operation</b></p><p class="api-content-type"><span><b>Content type</b></span><span class="api-path api-grey-text">application/json</span></p><p>Successful operation</p><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">application/json</b><span class="api-grey-text">User</span></p><p class="api-content-type">Child attributes</p><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">id</b><span class="api-grey-text">integer int64</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">username</b><span class="api-grey-text">string</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">firstName</b><span class="api-grey-text">string</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">lastName</b><span class="api-grey-text">string</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">email</b><span class="api-grey-text">string</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">password</b><span class="api-grey-text">string</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">phone</b><span class="api-grey-text">string</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">userStatus</b><span class="api-grey-text">integer int32</span></p><p>User Status</p></div></div></div><div><p><b>JSON example</b></p><div class="code-block detached" id="-chxg5j_31"><pre><code class="language-json">{
+  &quot;id&quot;: 10,
+  &quot;username&quot;: &quot;theUser&quot;,
+  &quot;firstName&quot;: &quot;John&quot;,
+  &quot;lastName&quot;: &quot;James&quot;,
+  &quot;email&quot;: &quot;john@email.com&quot;,
+  &quot;password&quot;: &quot;12345&quot;,
+  &quot;phone&quot;: &quot;12345&quot;,
+  &quot;userStatus&quot;: 1
+}</code></pre></div></div></section><section class="api-section"><div class="api-block api-grey-block"><p><span class="api-status-code api-code-green">default</span><b>successful operation</b></p><p class="api-content-type"><span><b>Content type</b></span></p><p>successful operation</p></div></section><section class="api-section"><div class="api-block api-grey-block"><p><span class="api-status-code api-code-red">400</span><b>Invalid username supplied</b></p><p class="api-content-type"><span><b>Content type</b></span><span class="api-path api-grey-text">application/json</span></p><p>Invalid username supplied</p><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">application/json</b><span class="api-grey-text">ErrorResponse</span></p><p class="api-content-type">Child attributes</p><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">code</b><span class="api-grey-text">integer int32</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">details</b><span class="api-grey-text">Array of object</span></p><p class="api-content-type">Child attributes</p><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">typeUrl</b><span class="api-grey-text">string</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">value</b><span class="api-grey-text">string</span></p></div></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">message</b><span class="api-grey-text">string</span></p></div></div></div><div><p><b>JSON example</b></p><div class="code-block detached" id="-chxg5j_34"><pre><code class="language-json">{
+  &quot;code&quot;: 0,
+  &quot;details&quot;: [
+    {
+      &quot;typeUrl&quot;: &quot;string&quot;,
+      &quot;value&quot;: &quot;string&quot;
+    }
+  ],
+  &quot;message&quot;: &quot;string&quot;
+}</code></pre></div></div></section></section></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="-525688876">Log user into the system</h1><div class="api-endpoint"><img class="inline-icon image image-container" src="https://img.shields.io/badge/-GET-167DFF" title="GET method"><span class="api-path">/user/login</span></div><p id="-525688876#-jrbsb1_20"></p><section><h2 id="-525688876#-jrbsb1_21" data-toc="-jrbsb1_21#Logs-user-into-the-system.md--jrbsb1_21">Request parameters</h2><div class="detached"><div class="api-section"><p><b>Query</b></p><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">username</b><span class="api-grey-text">string</span></p><p>The user name for login</p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">password</b><span class="api-grey-text">string</span></p><p>The password for login in clear text</p></div></div></div></section><section><h2 id="-525688876#-jrbsb1_23" data-toc="-jrbsb1_23#Logs-user-into-the-system.md--jrbsb1_23">Responses</h2><section class="api-section"><div class="api-block api-grey-block"><p><span class="api-status-code api-code-green">200</span><b>successful operation</b></p><p class="api-content-type"><span><b>Content type</b></span><span class="api-path api-grey-text">application/json</span></p><p>successful operation</p><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">application/json</b><span class="api-grey-text">string</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">X-Rate-Limit (Header)</b><span class="api-grey-text">integer int32</span><span class="api-required">required</span></p><p>calls per hour allowed by the user</p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">X-Expires-After (Header)</b><span class="api-grey-text">string date-time</span><span class="api-required">required</span></p><p>date in UTC when token expires</p></div></div><div><p><b>JSON example</b></p><div class="code-block detached" id="-jrbsb1_25"><pre><code class="language-json">&quot;example&quot;</code></pre></div></div></section><section class="api-section"><div class="api-block api-grey-block"><p><span class="api-status-code api-code-red">400</span><b>Invalid username/password supplied</b></p><p class="api-content-type"><span><b>Content type</b></span></p><p>Invalid username/password supplied</p></div></section></section></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="1631193570">Log current user out</h1><div class="api-endpoint"><img class="inline-icon image image-container" src="https://img.shields.io/badge/-GET-167DFF" title="GET method"><span class="api-path">/user/logout</span></div><p id="1631193570#-s774c5_12"></p><section><h2 id="1631193570#-s774c5_13" data-toc="-s774c5_13#Logs-out-current-logged-in-user-session.md--s774c5_13">Responses</h2><section class="api-section"><div class="api-block api-grey-block"><p><span class="api-status-code api-code-green">default</span><b>successful operation</b></p><p class="api-content-type"><span><b>Content type</b></span></p><p>successful operation</p></div></section></section></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="471905602">Find user</h1><div class="api-endpoint"><img class="inline-icon image image-container" src="https://img.shields.io/badge/-GET-167DFF" title="GET method"><span class="api-path">/user/{username}</span></div><p id="471905602#fm8oqp_23"></p><section><h2 id="471905602#fm8oqp_24" data-toc="fm8oqp_24#Get-user-by-user-name.md-fm8oqp_24">Request parameters</h2><div class="detached"><div class="api-section"><p><b>Path</b></p><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">username</b><span class="api-grey-text">string</span><span class="api-required">required</span></p><p>The name that needs to be fetched. Use user1 for testing. </p></div></div></div></section><section><h2 id="471905602#fm8oqp_26" data-toc="fm8oqp_26#Get-user-by-user-name.md-fm8oqp_26">Responses</h2><section class="api-section"><div class="api-block api-grey-block"><p><span class="api-status-code api-code-green">200</span><b>successful operation</b></p><p class="api-content-type"><span><b>Content type</b></span><span class="api-path api-grey-text">application/json</span></p><p>successful operation</p><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">application/json</b><span class="api-grey-text">User</span></p><p class="api-content-type">Child attributes</p><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">id</b><span class="api-grey-text">integer int64</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">username</b><span class="api-grey-text">string</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">firstName</b><span class="api-grey-text">string</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">lastName</b><span class="api-grey-text">string</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">email</b><span class="api-grey-text">string</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">password</b><span class="api-grey-text">string</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">phone</b><span class="api-grey-text">string</span></p></div><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">userStatus</b><span class="api-grey-text">integer int32</span></p><p>User Status</p></div></div></div><div><p><b>JSON example</b></p><div class="code-block detached" id="fm8oqp_28"><pre><code class="language-json">{
+  &quot;id&quot;: 10,
+  &quot;username&quot;: &quot;theUser&quot;,
+  &quot;firstName&quot;: &quot;John&quot;,
+  &quot;lastName&quot;: &quot;James&quot;,
+  &quot;email&quot;: &quot;john@email.com&quot;,
+  &quot;password&quot;: &quot;12345&quot;,
+  &quot;phone&quot;: &quot;12345&quot;,
+  &quot;userStatus&quot;: 1
+}</code></pre></div></div></section><section class="api-section"><div class="api-block api-grey-block"><p><span class="api-status-code api-code-red">400</span><b>Invalid username supplied</b></p><p class="api-content-type"><span><b>Content type</b></span></p><p>Invalid username supplied</p></div></section><section class="api-section"><div class="api-block api-grey-block"><p><span class="api-status-code api-code-red">404</span><b>User not found</b></p><p class="api-content-type"><span><b>Content type</b></span></p><p>User not found</p></div></section></section></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="1048285743">Update user</h1><div class="api-endpoint"><img class="inline-icon image image-container" src="https://img.shields.io/badge/-PUT-FC801D" title="PUT method"><span class="api-path">/user/{username}</span></div><p id="1048285743#-hisun5_21">This can only be done by the logged in user.</p><section><h2 id="1048285743#-hisun5_22" data-toc="-hisun5_22#Update-user.md--hisun5_22">Request parameters</h2><div class="detached"><div class="api-section"><p><b>Path</b></p><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">username</b><span class="api-grey-text">string</span><span class="api-required">required</span></p><p>name that needs to be updated</p></div></div><div class="api-section"><p><b>Body</b></p><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">application/json</b><span class="api-grey-text">User</span></p><p class="api-content-type">Child attributes</p><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">id</b><span class="api-grey-text">integer int64</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">username</b><span class="api-grey-text">string</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">firstName</b><span class="api-grey-text">string</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">lastName</b><span class="api-grey-text">string</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">email</b><span class="api-grey-text">string</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">password</b><span class="api-grey-text">string</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">phone</b><span class="api-grey-text">string</span></p></div><div class="api-block api-white-block"><p class="api-header"><b class="api-status-code">userStatus</b><span class="api-grey-text">integer int32</span></p><p>User Status</p></div></div></div><div><p><b>JSON</b></p><div class="code-block detached" id="-hisun5_25"><pre><code class="language-json">{
+&quot;id&quot;: 10,
+&quot;username&quot;: &quot;theUser&quot;,
+&quot;firstName&quot;: &quot;John&quot;,
+&quot;lastName&quot;: &quot;James&quot;,
+&quot;email&quot;: &quot;john@email.com&quot;,
+&quot;password&quot;: &quot;12345&quot;,
+&quot;phone&quot;: &quot;12345&quot;,
+&quot;userStatus&quot;: 1
+}</code></pre></div></div><div><p><b>JavaScript</b></p><div class="code-block detached" id="-hisun5_26"><pre><code class="language-javascript">const userPayload = {
+  id: 10,
+  username: &quot;theUser&quot;,
+  firstName: &quot;John&quot;,
+  lastName: &quot;James&quot;,
+  email: &quot;john@email.com&quot;,
+  password: &quot;12345&quot;,
+  phone: &quot;12345&quot;,
+  userStatus: 1
+};
+console.log(userPayload);</code></pre></div></div></div></section><section><h2 id="1048285743#-hisun5_27" data-toc="-hisun5_27#Update-user.md--hisun5_27">Responses</h2><section class="api-section"><div class="api-block api-grey-block"><p><span class="api-status-code api-code-green">default</span><b>successful operation</b></p><p class="api-content-type"><span><b>Content type</b></span></p><p>successful operation</p></div></section></section></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="499909261">Delete user</h1><div class="api-endpoint"><img class="inline-icon image image-container" src="https://img.shields.io/badge/-DELETE-FF318C" title="DELETE method"><span class="api-path">/user/{username}</span></div><p id="499909261#-bcyo50_19">This can only be done by the logged in user.</p><section><h2 id="499909261#-bcyo50_20" data-toc="-bcyo50_20#Delete-user.md--bcyo50_20">Request parameters</h2><div class="detached"><div class="api-section"><p><b>Path</b></p><div class="api-block api-grey-block"><p class="api-header"><b class="api-status-code">username</b><span class="api-grey-text">string</span><span class="api-required">required</span></p><p>The name that needs to be deleted</p></div></div></div></section><section><h2 id="499909261#-bcyo50_22" data-toc="-bcyo50_22#Delete-user.md--bcyo50_22">Responses</h2><section class="api-section"><div class="api-block api-grey-block"><p><span class="api-status-code api-code-red">400</span><b>Invalid username supplied</b></p><p class="api-content-type"><span><b>Content type</b></span></p><p>Invalid username supplied</p></div></section><section class="api-section"><div class="api-block api-grey-block"><p><span class="api-status-code api-code-red">404</span><b>User not found</b></p><p class="api-content-type"><span><b>Content type</b></span></p><p>User not found</p></div></section></section></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="-1891370333">Changes</h1><section><h2 id="-1891370333#september-1-2023" data-toc="september-1-2023#Changes.md-september-1-2023">September 1, 2023</h2><div class="table-wrapper detached"><table id="-1891370333#i56oq7_22"><tr class="header-row" id="-1891370333#i56oq7_23"><th id="-1891370333#i56oq7_24"><p>Method</p></th><th id="-1891370333#i56oq7_25"><p>Changes</p></th></tr><tr class="" id="-1891370333#i56oq7_26"><td id="-1891370333#i56oq7_27"><p><span class="inline-code" id="-1891370333#i56oq7_28">/pet/gift</span> (<a href="#80127">Pet</a>)</p></td><td id="-1891370333#i56oq7_30"><p>Deprecated and removed from the documentation</p></td></tr><tr class="" id="-1891370333#i56oq7_31"><td id="-1891370333#i56oq7_32"><p><span class="inline-code" id="-1891370333#i56oq7_33">/pet/{petId}</span> (<a href="#80127">Pet</a>)</p></td><td id="-1891370333#i56oq7_35"><ul class="list" id="-1891370333#i56oq7_36" start="1"><li class="list-item" id="-1891370333#i56oq7_37"><p>added the <span class="inline-code" id="-1891370333#i56oq7_38">status</span> field</p></li><li class="list-item" id="-1891370333#i56oq7_39"><p>removed the <span class="inline-code" id="-1891370333#i56oq7_40">state</span> field</p></li></ul></td></tr></table></div></section></article></div></section></div></body></html>
