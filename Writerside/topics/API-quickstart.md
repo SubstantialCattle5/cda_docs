@@ -9,7 +9,7 @@ cda export <pool_name> <vm_snapshot_name>
 cda export-diff <pool_name> <vm_snapshot_name> 
 ```
 
-### Description 
+### Check Description
 
 Saves a timestamp and checksum to the inbuilt log file of an `ceph_image` which can be later used for validation checks.
 
@@ -24,7 +24,7 @@ Verifies the integrity of a snapshot by comparing its current checksum with the 
 cda verify <export/export-diff> <dc_log_file> <dr_log_file> <pool_name> <image_name>
 ```
 
-### Description
+### Verify Description
 Verifies the integrity of the given snapshot by comparing the current checksum with the ones stored in the DC and DR log files. This ensures the snapshot has not been altered since the last recorded checksum.
 
 1. `<export/export-diff>` specifies whether to use export or export-diff.
@@ -45,7 +45,7 @@ Generates the autocompletion script for the specified shell.
 cda completion [shell]
 ```
 
-### Description
+### Completion Description
 
 Generates a script that enables autocompletion for the cda commands in the specified shell.
 
