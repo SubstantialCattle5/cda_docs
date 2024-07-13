@@ -9,7 +9,7 @@ Automate the process of verifying data integrity during disaster recovery drills
 **Note** : In this guide we describe using installation using .tar file. You can also clone it from [github](https://github.com/substantialcattle5/)
 Install the file using 
 ```Shell
-   wget localhost.com 
+wget https://github.com/SubstantialCattle5/cda/releases/download/<tag>/<asset-name>
 ```
 Then unzip the file 
 ```Shell
